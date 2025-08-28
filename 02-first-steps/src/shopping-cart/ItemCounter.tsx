@@ -4,9 +4,10 @@ import React from 'react'
 //
 interface Props {
     name: string;
+    quantity: number;
 }
 
-export const ItemCounter = ({ name }: Props) => {
+export const ItemCounter = ({ name, quantity }: Props) => {
     return (
         <section style={
             {
@@ -23,7 +24,7 @@ export const ItemCounter = ({ name }: Props) => {
                 {name}
             </span>
             <button>+1</button>
-            <span>10</span>
+            <span>{quantity}</span>
             <button>-1</button>
         </section>
     )
